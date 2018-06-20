@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Getting Familiar with CSS3 TRansition</title>
+  <link rel="stylesheet" href="./transition.css">
+</head>
+<body>
+  <header>
+    <h1>Getting Familiar with CSS3 TRansition</h1>
+  </header>
+
+  <section id="game">
+    <div id="cards">
+      <div id="card1" class="card cardAK"></div>
+      <div id="card2" class="card cardAQ"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>This is an example of transitioning cards.</p>
+  </footer>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $('#card1').addClass('move-and-scale');
+      $('#card2').addClass('rotate-right');
+    });
+  </script>
+</body>
+</html>
