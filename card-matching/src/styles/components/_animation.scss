@@ -1,0 +1,7 @@
+.rotate-right {
+  transform: rotate3d(0, 0, 1, 90deg);
+}
+
+.move-and-scale {
+  transform: translate3d(150px, 150px, 0) scale3d(1.5, 1.5, 1);
+}
