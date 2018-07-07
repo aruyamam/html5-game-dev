@@ -1,0 +1,17 @@
+#game {
+  border-radius: 10px;
+  border: 1px solid grey;
+  background: darkgreen url(images/table.jpg);
+  width: 500px;
+  height: 460px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cards {
+  position: relative;
+  width: 380px;
+  height: 400px;
+}

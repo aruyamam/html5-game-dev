@@ -1,39 +1,59 @@
 .card {
+  position: absolute;
   perspective: 600px;
   width: 80px;
   height: 120px;
+  transition: all .3s;
+
+  &:hover &--face,
+  &.isFlipped &--face {
+    box-shadow: 0 0 10px #aaa;
+  }
 
   &__face {
     border-radius: 10px;
     width: 100%;
     height: 100%;
     position: absolute;
-    transition: all .3s;
+    transition-property: opacity, transform, box-shadow;
+    transition-duration: .3s;
+
     backface-visibility: hidden;
   }
 
   &__front {
-    background: #966;
+    background: gray url(images/deck.png) 0 -480px;
   }
 
   &__back {
-    background: #eaa;
+    background: lightgrey url(images/deck.png);
     transform: rotate3d(0, 1, 0, -180deg);
   }
 
-  &--AK {
-    background: url(images/AK.png);
+  &--AJ { background-position: -800px 0; }
+  &--AQ { background-position: -880px 0; }
+  &--AK { background-position: -960px 0; }
+  &--BJ { background-position: -800px -120px; }
+  &--BQ { background-position: -880px -120px; }
+  &--BK { background-position: -960px -120px; }
+  &--CJ { background-position: -800px -240px; }
+  &--CQ { background-position: -880px -240px; }
+  &--CK { background-position: -960px -240px; }
+  &--DJ { background-position: -800px -360px; }
+  &--DQ { background-position: -880px -360px; }
+  &--DK { background-position: -960px -360px; }
+
+  &.isRemoved {
+    opacity: 0;
   }
 
-  &--AQ {
-    background: url(images/AQ.png);
+  &.isFlipped .card__front {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+  
+  &.isFlipped .card__back {
+    transform: rotate3d(0, 1, 0, 0deg);
   }
 }
 
-.card-flipped .card__front {
-  transform: rotate3d(0, 1, 0, 180deg);
-}
 
-.card-flipped .card__back {
-  transform: rotate3d(0, 1, 0, 0deg);
-}
