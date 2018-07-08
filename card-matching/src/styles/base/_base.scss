@@ -1,4 +1,9 @@
+@import url('http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold&subset=latin');
+
 body {
-  text-align: center;
   background: brown url(images/bg.jpg);
+  text-align: center;
+  font-family: 'Droid Serif', Arial, serif;
+  color: #ccc;
+  text-shadow: 1px 2px 1px #000;
 }
