@@ -8,4 +8,5 @@ document.addEventListener('DOMContentLoaded', () => {
    const height = canvas.height;
 
    untangleGame.createRandomCircles(width, height);
+   untangleGame.connectCircles();
 });
