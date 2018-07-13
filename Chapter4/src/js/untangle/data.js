@@ -2,7 +2,8 @@ import untangleGame from './drawing'
 
 const circles = [],
       lines = [],
-      thinLineThickness = 1;
+      thinLineThickness = 1,
+      $game = document.getElementById('game');
 
 function Circle(x, y, radius) {
    this.x = x;
@@ -35,4 +36,5 @@ export default {
    circles,
    lines,
    thinLineThickness,
+   $game,
 };

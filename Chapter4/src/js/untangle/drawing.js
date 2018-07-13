@@ -32,6 +32,26 @@ untangleGame.connectCircles = function () {
    }
 };
 
-untangleGame.connectCircles();
+untangleGame.drawAllLines = function () {
+   for (let i = 0; i < this.lines.length; i++) {
+      const line = this.lines[i];
+      const startPoint = line.startPoint;
+      const endPoint = line.endPoint;
+      const thickness = line.thickness;
+      this.drawLine(startPoint.x, startPoint.y, endPoint.x, endPoint.y, thickness);
+   }
+};
+
+untangleGame.drawAllCircless = function () {
+   for (let i = 0; i < this.circles.length; i++) {
+      const circle = this.circles[i];
+      this.drawCircle(circle.x, circle.y, circle.radius);
+   }
+};
+
+untangleGame.clear = function () {
+   const ctx = this.ctx;
+   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+};
 
 export default untangleGame;

@@ -1,4 +1,4 @@
-import untangleGame from './drawing';
+import untangleGame from './input';
 
 document.addEventListener('DOMContentLoaded', () => {
    const canvas = document.getElementById('game');
@@ -9,4 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
    untangleGame.createRandomCircles(width, height);
    untangleGame.connectCircles();
+   untangleGame.handleInput();
+
+   setInterval(gameloop, 30);
+   
+   function gameloop() {
+      untangleGame.clear();
+      untangleGame.drawAllLines();
+      untangleGame.drawAllCircless();
+   }
 });
