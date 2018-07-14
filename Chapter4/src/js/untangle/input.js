@@ -28,6 +28,7 @@ untangleGame.handleInput = function () {
          circle.y = mouseY;
       }
       untangleGame.connectCircles();
+      untangleGame.updateLineIntersection();
    });
 
    $game.addEventListener('mouseup', function (e) {
