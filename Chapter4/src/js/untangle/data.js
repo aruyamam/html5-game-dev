@@ -70,8 +70,8 @@ function isInBetween(a, b, c) {
 
 function updateLineIntersection() {
    for (let i = 0; i < untangleGame.lines.length; i++) {
-         for (let j = 0; j < i; j++) {
-            const line1 = untangleGame.lines[i];
+      for (let j = 0; j < i; j++) {
+         const line1 = untangleGame.lines[i];
          const line2 = untangleGame.lines[j];
 
          if (isIntersect(line1, line2)) {
